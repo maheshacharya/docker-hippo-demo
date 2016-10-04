@@ -1,0 +1,12 @@
+#install mysql
+mysql:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=my-secret-pw
+    - MYSQL_PASSWORD=hippo
+    - MYSQL_USER=hippo
+    - ON_CREATE_DB="hippo"
+  ports:
+    - "3306:3306"
+  expose:
+    - "3306"
